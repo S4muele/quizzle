@@ -1,13 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@700&display=swap');
+
+html {
+  font-size: .65rem;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F5F7FB;
+  /* letter-spacing: .75px; */
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* START SCREEN */
+.start-game-container {
+  height: 100vh;
+  color: #293264;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: 'Karla', sans-serif;
+  font-size: 6rem;
+  margin: 0;
+}
+.instructions {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.start-button {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  background: none;
+  background-color: #4D5B9E;
+  border: 1px solid #4D5B9E;
+  color: white;
+  border-radius: 20px;
+  padding: .75em 2em;
+  margin-top: 1.25em;
+  cursor: pointer;
+}
+.start-button:hover, 
+.start-button:focus {
+  background-color: #D6DBF5;
+  border: 1px solid #293264;
+  color: #293264;
+}
+/* MAIN GAME */
+.game-header {
+  font-family: 'Karla', sans-serif;
+  font-size: 4rem;
+  align-self: center;
+}
+.game-container {
+  color: #293264;
+  font-size: 1.15rem;
+  margin: 0 auto;
+  padding: 3em;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+.game-container * {
+  margin: 0;
+}
+.question-container {
+  font-family: 'Karla', sans-serif;
+  border-bottom: 1.25px solid rgba(41, 50, 100, 0.2);
+  margin-top: 2.5em;
+}
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center ;
+  margin: .75em 0;
+}
+.option-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  max-width: 200px;
+  text-align: center;
+}
+.option {
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #293264;
+  cursor: pointer;
+  margin: 1em 0;
+  padding: .5em 1.75em;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.check-results-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.35rem;
+  background-color: #4D5B9E;
+  border: 1px solid #293264;
+  color: white;
+  border-radius: 20px;
+  padding: .75em 2em;
+  margin-top: 3em;
+  align-self: center;
+  cursor: pointer;
+}
+.disabled {
+  background-color: #D6DBF5;
+  border: 1px solid #8c8e97;
+  color: #8c8e97;
+  cursor: auto;
+}
+.check-results-btn.enabled:hover, 
+.check-results-btn.enabled:focus {
+  background-color: #D6DBF5;
+  border: 1px solid #293264;
+  color: #293264;
+}
+.option-selected {
+  background-color: #D6DBF5;
+  border: 1px solid #D6DBF5;
+}
+/* RESULTS SECTION */
+.score-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-score {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.75rem;
+  margin-right: 1em;
+  font-weight: bold;
+}
+.play-again-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.35rem;
+  background-color: #4D5B9E;
+  border: 1px solid #293264;
+  color: white;
+  border-radius: 20px;
+  padding: .75em 2em;
+  margin: 1.5em 0;
+  align-self: center;
+  cursor: pointer;
+}
+.play-again-btn:hover,
+.play-again-btn:focus {
+  background-color: #D6DBF5;
+  border: 1px solid #293264;
+  color: #293264;
+}
+.correct-option {
+  background-color: #94D7A2;
+  border: 1px solid #94D7A2;
+}
+.incorrect-option {
+  color: rgba(41, 50, 100, 0.5);
+  background-color: #F8BCBC;
+  border: 1px solid #F8BCBC;
+}
+.dimmed-option {
+  color: rgba(41, 50, 100, 0.5);
+  border: 1px solid rgba(41, 50, 100, 0.5);
+}
+@media (min-width: 600px) {
+  html {
+    font-size: .75rem;
+  }
+  .options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 1.75em 1em 0 0;
+  }
+}
+@media (min-width: 1000px) {
+  html {
+    font-size: 1rem;
+  }
 }
