@@ -1,5 +1,4 @@
 import React from "react";
-import { nanoid } from "nanoid"
 import Option from "./Option";
 
 export default function Question({question, possibleAnswers, selectAnswer, results, id}) {

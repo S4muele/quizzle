@@ -1,5 +1,4 @@
 import React from "react"
-import Game from "./components/Game"
 import MainGame from "./components/MainGame"
 
 export default function App() {
@@ -7,25 +6,25 @@ export default function App() {
 const [allData, setAllData] = React.useState("")
 
 function startGame() {
-  fetch("https://opentdb.com/api.php?amount=5&category=9")
+  fetch("https://opentdb.com/api.php?amount=5&encode=url3986")
         .then(res => res.json())
         .then(data => {
 
-        const formattedGameData = data.results.map(dataEl => {
-            const formattedQuestion = dataEl.question.replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&")
-            const formattedRightAnswer = dataEl.correct_answer.replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, "&").replace(/&amp;/g, "&")
-            const formattedWrongAnswers = dataEl.incorrect_answers.map(wrongAnswer => {
-                return wrongAnswer.replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&")
+          const decodedGameData = data.results.map(dataEl => {
+            const decodedQuestion = decodeURIComponent(dataEl.question)
+            const decodedRightAnswer = decodeURIComponent(dataEl.correct_answer)
+            const decodedWrongAnswers = dataEl.incorrect_answers.map(wrongAnswer => {
+                return decodeURIComponent(wrongAnswer)
             })
             return {
                 ...dataEl,
-                question: formattedQuestion,
-                correct_answer: formattedRightAnswer,
-                incorrect_answers: formattedWrongAnswers
+                question: decodedQuestion,
+                correct_answer: decodedRightAnswer,
+                incorrect_answers: decodedWrongAnswers
             }
         })
  
-            setAllData(formattedGameData)
+            setAllData(decodedGameData)
         })
 }
 
