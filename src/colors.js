@@ -1,0 +1,40 @@
+export const colors = {
+    light: {
+        type: "light",
+        background: "#6B73F0",
+        pink: "#FF5F92",
+        pinkHover: "#F86F9B",
+        yellow: "#FFB271",
+        yellowHover: "#F2C299",
+        blue: "#5B9DFF",
+        blueHover: "#5B9DFF",
+        black: "#333246",
+        settingBg: "#FFFFFF",
+        slider: "#6B73F0",
+        sliderThumb: "#F5F6FD",
+        optionBg: "#7C83ED",
+        selectedOptionBg: "#FFB271",
+        correctOption: "#8CD78F",
+        incorrectOption: "#F29999",
+        dimmedOption: "#737BEE"
+    },
+    dark: {
+        type: "dark",
+        background: "#333246",
+        pink: "#E33D57",
+        pinkHover: "#F86F9B",
+        yellow: "#FF9F2C",
+        yellowHover: "#F2C299",
+        blue: "#5DC1CA",
+        blueHover: "#75D8E0",
+        black: "#333246",
+        settingBg: "#FFFFFF",
+        slider: "#1B1B1B",
+        sliderThumb: "#F5F6FD",
+        optionBg: "#f5f6fd42",
+        selectedOptionBg: "#FF9F2C",
+        correctOption: "#51C855",
+        incorrectOption: "#FE6868",
+        dimmedOption: "#373738"
+    }
+}
