@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/S4muele/quizzle.git/static/js/main.53e43607.js",
-    "index.html": "/S4muele/quizzle.git/index.html",
-    "main.53e43607.js.map": "/S4muele/quizzle.git/static/js/main.53e43607.js.map"
+    "main.js": "/quizzle/static/js/main.9dedf8c5.js",
+    "index.html": "/quizzle/index.html",
+    "main.9dedf8c5.js.map": "/quizzle/static/js/main.9dedf8c5.js.map"
   },
   "entrypoints": [
-    "static/js/main.53e43607.js"
+    "static/js/main.9dedf8c5.js"
   ]
 }
