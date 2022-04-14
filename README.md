@@ -1,13 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -30,13 +21,11 @@
 <br />
 <div align="center">
   <a href="https://s4muele.github.io/quizzle/" target="_blank">
-    <img src="images/quizzle_thumb.png" alt="Logo" width="20%">
+    <img src="https://raw.githubusercontent.com/S4muele/quizzle/master/public/images/quizzle_thumb.png" alt="Logo" width="400">
   </a>
 
-<h3 align="center">Quizzle</h3>
-
   <p align="center">
-    A web based trivia game made with React.
+    A browser based quiz game, leveraging the <a href="https://opentdb.com/api_config.php">Open Trivia Database API</a>.
     <br />
     <a href="https://github.com/S4muele/quizzle"><strong>Explore the docs »</strong></a>
     <br />
@@ -81,19 +70,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center">
-  <a href="https://s4muele.github.io/quizzle/" target="_blank" align="center">
-    <img src="images/quizzle_thumb.png" alt="Logo" width="80%" max-width="650">
-  </a>
-  
-</div>
+Quizzle, makes use of the Open Trivia Database API to generate the quiz data. 
 
-<br>
-A web based quiz game using data from the <a href="https://opentdb.com/api_config.php">Open Trivia Database API</a>.
+The user can now return between 3 and 50 questions per match and filter them by category, difficulty and type.
+
+A settings page has been added with a toggle for sound effects, background music and dark mode.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
@@ -111,50 +94,28 @@ To get a local copy up and running, you might follow these example steps.
 ### Prerequisites
 
 This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started/).
-<br>
-To create one, first make sure you have the latest version of node.js and npm (or yarn) installed to your machine, then run the appropriate command for your chosen package manager: 
+
 * npm
   ```sh
     npx create-react-app my-app
   ```
-* yarn
-  ```
-    yarn create react-app my-app
-  ```
-
+  
 ### Installation
 
 1. Clone this repository to your local machine:
    ```sh
-   git clone https://github.com/S4muele/Tenzies.git
+   git clone https://github.com/S4muele/quizzle.git
    ```
-2. Copy the Quizzle files to your newely created React App boilerplate.
+2. Copy Quizzle files to your newely created React App boilerplate.
 
-3. You'll need [nanoid](https://github.com/ai/nanoid#readme) installed as a dependency to your project. If you don't have it already:
-   ```sh
-   npm install --save nanoid
-   ```
-4. Finally, navigate to the application folder and run it:
-   ```
-    npm start
-   ```
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Quizzle, makes use of the Open Trivia Database API to generate the quiz data. Currently the app returns 5 questions per match, but this could be customised by changing the request in the `App.js` file.
-
-For instance, it could only return specific categories of questions, difficulty levels, types and so on. Visit their [documentation](https://opentdb.com/api_config.php) to learn more about cutomising the request.
+3. There are a few required dependencies to this project, check the package.json for details.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This is an open source project that I'm looking to maintain over time. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -182,8 +143,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 [S4muele](https://www.linkedin.com/in/samuele-simeone-b27173216/) - [@anthony_sime](https://twitter.com/anthony_sime)
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/S4muele/quizzle)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
